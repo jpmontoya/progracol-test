@@ -1,0 +1,16 @@
+<div class="shape-container">
+    <div class="shape-canvas">
+        <div class="shape-header">
+            <div class="title"> Lista de figuras</div>
+            <button (click)="createFigure()" class="btn-primary"><i class="fas fa-plus"></i></button>
+        </div>
+        <hr>
+        <div class="shape-body">
+            <div *ngFor="let shape of figuresData.data" class="shape-item">
+                <div class="title"> {{ shape.figurename }} </div>
+                <div class="btn-delete"><i class="fas fa-trash"></i></div>
+                <div *ngFor="let item of shape.positions" [class]="item === false ? 'piece': 'piece selected'"></div>
+            </div>
+        </div>
+    </div>
+</div>

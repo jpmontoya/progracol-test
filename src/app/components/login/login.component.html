@@ -1,0 +1,16 @@
+<div class="login-container">
+    <form action="" method="post">
+        <img src="https://progracol.com/wp-content/uploads/2021/02/Logo_header_flotante43.png" alt="Logo progracol">
+        <div class="inputGroup">
+            <label for="userInput">Usuario</label>
+            <input type="text" id="userInput" name="userInput" [(ngModel)]="userInput" [class]="userError ? 'error': ''">
+            <small class="errorForm">{{ userError }}</small>
+        </div>
+        <div class="inputGroup">
+            <label for="passInput">Contraseña</label>
+            <input type="password" id="passInput" name="passInput" [(ngModel)]="passInput" [class]="passError ? 'error': ''">
+            <small class="errorForm">{{ passError }}</small>
+        </div>
+        <button class="btn-primary" (click)="validationFrom()">INGRESAR</button>
+    </form>
+</div>

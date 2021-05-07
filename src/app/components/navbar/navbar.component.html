@@ -1,0 +1,26 @@
+<div class="navbar-container">
+    <div class="brand">
+        <i class="fas fa-terminal"></i>
+    </div>
+    <div class="menu-link">
+        <div>PrograCol</div>
+    </div>
+    <div class="menu-right">
+        <a class="btn-profile" (click)="dropdown()">Juan <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <div class="dropdown-item" routerLink="/figuras">
+                <a><i class="fas fa-border-all"></i> Mis Figuras</a>
+            </div>
+            <div class="dropdown-item">
+                <a><i class="fas fa-layer-group"></i> Grupos de figuras</a>
+            </div>
+            <div class="dropdown-item" routerLink="/perfil">
+                <a ><i class="fas fa-user"></i> Perfil</a>
+            </div>
+            <hr>
+            <div class="dropdown-item" (click)="signuot()">
+                <a>Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="new-shape-bg" id="modalNewShape" (click)="closeModal($event)">
+    <div class="new-shape-container">
+        <div class="new-shape-header">
+            <div class="inputGroup">
+                <label for="nameInput">Nombre de la figura</label>
+                <input type="text" name="nameinput" id="nameinput" [(ngModel)]="newShape.figurename">
+            </div>
+        </div>
+        <div class="new-shape-body">
+            <div (click)="selectPiece(i)" *ngFor="let item of newShape.positions; index as i" [class]="item === false ? 'shape-item' : 'shape-item selected'"></div>
+        </div>
+        <button (click)="saveShape()" class="btn-primary">CREAR</button>
+    </div>
+</div>
+
+<modal-success></modal-success>
+<modal-error></modal-error>
